@@ -31,12 +31,18 @@ const QuoteList: FC<QuoteListProps> = ({ topic }) => {
   return (
     <div className="bg-base-100 shadow rounded p-4 space-y-2">
       <p className="text-sm text-muted-foreground">
-        Showing quotes for: <span className="font-semibold">{normalized}</span>
+        Showing quotes for:{" "}
+        <span className="font-semibold">{normalized}</span>
       </p>
       {quotes ? (
         <ul className="list-disc list-inside space-y-1">
           {quotes.map((quote, index) => (
-            <li key={index}>{quote}</li>
+            <li
+              key={index}
+              style={{ color: "#802644" }} // Your desired quote color
+            >
+              {quote}
+            </li>
           ))}
         </ul>
       ) : (

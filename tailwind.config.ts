@@ -7,6 +7,10 @@ const config: Config = {
     extend: {},
   },
   plugins: [daisyui],
+  // @ts-expect-error: DaisyUI adds this property dynamically
+  daisyui: {
+    themes: ["synthwave"],
+  },
 };
 
 export default config;

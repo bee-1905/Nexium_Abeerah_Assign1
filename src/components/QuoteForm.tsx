@@ -34,8 +34,8 @@ export default function QuoteForm({ onSubmit }: QuoteFormProps) {
           onChange={(e) => setTopic(e.target.value)}
         />
       </div>
-      <Button type="submit" className="w-full">
-        Generate Quotes
+      <Button className="btn btn-primary w-full transition-transform duration-300 hover:scale-105">
+         Generate Quotes
       </Button>
     </form>
   );
