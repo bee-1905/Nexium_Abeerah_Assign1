@@ -8,6 +8,10 @@ Users can enter a topic to receive motivational quotes in an aesthetic, glowing 
 ## ✨ Live Demo
 👉 [View the App on Vercel](https://nexium-abeerah-assignment-1.vercel.app/)
 
+Words saved:
+-> happiness
+-> success
+-> motivation
 ---
 
 ## 🎨 Features
