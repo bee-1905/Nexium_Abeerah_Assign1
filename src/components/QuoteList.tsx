@@ -29,24 +29,34 @@ const QuoteList: FC<QuoteListProps> = ({ topic }) => {
   const quotes = quotesByTopic[normalized];
 
   return (
-    <div className="bg-base-100 shadow rounded p-4 space-y-2">
-      <p className="text-sm text-muted-foreground">
+    <div
+      className="
+        bg-yellow/10
+        backdrop-blur-md
+        border-1 border-pink-600/40
+        rounded-lg
+        p-4
+        space-y-2
+        shadow-[0_0_20px_#9e331b]
+        transition
+        duration-500
+        animate-fadeIn
+      "
+    >
+      <p className="text-sm text-pink-900">
         Showing quotes for:{" "}
-        <span className="font-semibold">{normalized}</span>
+        <span className="font-semibold text-pink-900">{normalized}</span>
       </p>
       {quotes ? (
-        <ul className="list-disc list-inside space-y-1">
+        <ul className="list-disc list-inside space-y-2">
           {quotes.map((quote, index) => (
-            <li
-              key={index}
-              style={{ color: "#802644" }} // Your desired quote color
-            >
+            <li key={index} className="font-semibold text-pink-900">
               {quote}
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-center text-muted-foreground">
+        <p className="text-center text-pink-900">
           No quotes found for this topic.
         </p>
       )}

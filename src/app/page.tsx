@@ -30,17 +30,18 @@ export default function Home() {
           <Leaf className="w-8 h-8" style={{ color: "#990d3e" }} />
           Quote Generator Web App
         </h1>
-        <p className="text-center" style={{ color: "#990d3e" }}>
-          Enter a topic below:
-        </p>
-        <QuoteForm onSubmit={setCurrentTopic} />
-        {currentTopic ? (
-          <QuoteList topic={currentTopic} />
-        ) : (
-          <p className="text-center" style={{ color: "#ff1493" }}>
-            Enter a topic to see motivational quotes.
-          </p>
-        )}
+
+        {/* Restore spacing under the heading */}
+        <div className="space-y-6">
+          <QuoteForm onSubmit={setCurrentTopic} />
+          {currentTopic ? (
+            <QuoteList topic={currentTopic} />
+          ) : (
+            <p className="text-center" style={{ color: "#ff1493" }}>
+              Enter a topic to see motivational quotes.
+            </p>
+          )}
+        </div>
       </div>
     </main>
   );
